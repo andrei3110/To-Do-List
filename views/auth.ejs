@@ -1,0 +1,49 @@
+<%- include('particles/header.ejs') %>
+
+<%- include('particles/navigation.ejs') %>
+<div class="container">
+<div class="Avtorisation"><div class="text_head"><h3>Authorization</h3></div></div>
+<div class="vhod">
+    <div class="VhodBlock">
+    <h1 class="h1">Log in</h1>
+
+<div class="imgCenter">
+
+    <form action="/login" method="post">
+        <div class="form-group">
+
+            <input class="form-group__input_reg" type="text" id="name" name="name" placeholder="@UserName" required>
+        </div>       
+       
+
+
+        <div class="form-group">
+
+            <input class="form-group__input_reg" type="password" id="password" name="password" placeholder="password">
+        </div>
+
+        <input class="content-button_status-button"  type="submit" value="Войти">
+    </form>
+</div>
+</div>
+</div>
+<div class="registration">
+    <h1 class="h1">registration</h1>
+    <form action="/register" method="post">
+        <div class="form-group">
+
+            <input class="form-group__input_reg" type="text" id="name" name="name"  autocomplete="off" placeholder="@UserName">
+        </div>      
+
+        <div class="form-group">
+
+            <input class="form-group__input_reg" type="password" id="password" name="password"  autocomplete="off" placeholder="password">
+        </div>
+
+        <input class="content-button_reg_status-button" type="submit" value="Зарегистрироваться">
+    </form>
+</div>
+<div class="auth_podval">сайт является пробной версией</div>
+
+
+<%- include('particles/footer.ejs') %>
