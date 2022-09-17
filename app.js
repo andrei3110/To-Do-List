@@ -76,7 +76,7 @@ app.get('/', (req, res) => {
         if (err) throw err;
         if (data.length > 0) {
           req.session.auth = true;
-          res.redirect('/')
+          res.redirect('/home')
   
         }
         else {
@@ -106,7 +106,7 @@ app.get('/', (req, res) => {
                   
               });
               req.session.auth = true;
-              res.redirect('/');
+              res.redirect('/home');
             });
   
         }
