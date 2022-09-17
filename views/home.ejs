@@ -1,0 +1,56 @@
+<%- include('particles/header.ejs') %>
+
+<%- include('particles/navigation.ejs') %>
+
+
+
+
+
+<div class="shapka">
+  
+  
+</div>
+
+<div class="container">
+<div class="df"> 
+<div class="dropdown">
+<form method="post" action="add">
+  <div id="myDropdown" class="dropdown-content">
+
+   <div class="text"><h2> My To Do List </h2></div>
+    
+    <a href="#"><input autocomplete="off" class="inputText" id="resert_input" type="text"
+        placeholder="Write what you want text" name="title"></a>
+        <button id="btn_inWin" class="add_Btn"  type="submit">Add</button>
+    
+  </div>
+</form>
+</div>
+
+</div>
+
+      
+<% for (let i = 0; i < notes.length; i++) { %>
+  <form action="/delete" method="post">
+    <div class="section">        
+      <div class="section__title" ><input type="hidden" id="edit_input"><%= notes[i].title %></div>   
+        
+     
+     <div class="notes">
+    <input value="<%= notes[i].id%>" type="hidden" name="id">
+    <input class="del_button_item" type="submit" value="Удалить">
+    
+    
+  
+  </div>
+</div>
+</form>
+
+
+<% } %>
+<div class="podval"> сайт является пробной версией</div>
+</div>
+<%- include('particles/footer.ejs') %>
+
+
+
