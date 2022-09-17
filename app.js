@@ -53,7 +53,7 @@ app.listen(3006)
 
 
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   connection.query("SELECT * FROM notes", (err, data, fields) => {
     if (err) throw err;
 
@@ -64,7 +64,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/auth', (req, res) => {
+app.get('/', (req, res) => {
   
     res.render('auth');
   });
