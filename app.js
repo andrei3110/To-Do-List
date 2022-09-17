@@ -8,11 +8,14 @@ const app = express();
 
 
 // Соединение с базой данных
-const connection = mysql.createConnection({
-  host: "127.0.0.1",
-  database: "ToDo",
-  user: "root",
-  password: "parol"
+require('dotenv').config();
+
+const connection = mysql.createConnection(
+{
+ host: process.env.DB_HOST,
+ database: process.env.DB_NAME,
+ user: process.env.DB_USER,
+ password: process.env.DB_PASS,
 });
 
 connection.connect(function (err) { if (err) throw err; });
