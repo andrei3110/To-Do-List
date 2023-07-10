@@ -45,7 +45,7 @@ function isAuth(req, res, next) {
   }
 }
 // Запуск веб-сервера по адресу http://localhost:3000
-app.listen(3006)
+app.listen(3000)
 
 /**
  * Маршруты
